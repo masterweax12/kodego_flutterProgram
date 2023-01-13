@@ -1,24 +1,23 @@
 class Person {
-  late String name;
-  late int age;
+  late String _name;
+  late int _age; //try create a setter and getter function.
 
 
-  Person() {
-    name = "Eugene";
-    age = 18;
+
+  Person(){
+    _name = "Eugene";
+    _age = 18;
   }
 
-  void displayName() {
-    print("My name is $name");
+  String getName(){
+    return _name;
   }
 
+  void setName(String name){
+    _name = name;
+  }
+
+  void displayName(){
+    print("My name is $_name");
+  }
 }
-
-  void main(){
-    Person eugene = Person();
-    print(eugene.name);
-
-    eugene.age = 21;
-    print(eugene.age);
-    eugene.displayName();
-  }
